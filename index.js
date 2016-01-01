@@ -55,6 +55,13 @@
           });
 
           server.ext('onPostAuth', (request, reply) => {
+
+            if (request.route.settings.plugins &&
+              !request.route.settings.plugins.limitd) {
+
+              return reply.continue();
+            }
+
             let valueInRequest = parseRequestForKey(request, value.inRequestKey);
 
             if (!valueInRequest) {

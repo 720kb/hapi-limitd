@@ -34,6 +34,25 @@ The `options` map contains:
  - `bucket`: the bucket defined in limitd;
  - `inRequestKey`: the request key that identify the user.
 
+If you want to enable the limiting count on routes you have to fill the `config.plugins.limitd` to true.
+
+For example:
+
+ ```js
+ server.route({
+   'method': 'GET',
+   'path': '/ping',
+   'handler': (request, reply) => {
+
+     reply('pong');
+   },
+   'config': {
+     'plugins': {
+       'limitd': true
+     }
+   }
+ });
+ ```
 ## License
 
 The MIT License (MIT)
