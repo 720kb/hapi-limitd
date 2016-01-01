@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "an auth0/limitd plugin for hapi",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/720kb/hapi-limitd"
+  },
   "scripts": {
     "lint": "eslint -c .eslintrc index.js && jshint -c .jshintrc --reporter=unix index.js && jscs -c .jscsrc index.js",
     "precommit": "npm run-script lint",
