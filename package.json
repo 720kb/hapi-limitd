@@ -1,6 +1,6 @@
 {
   "name": "hapi-limitd",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "an auth0/limitd plugin for hapi",
   "main": "index.js",
   "repository": {
